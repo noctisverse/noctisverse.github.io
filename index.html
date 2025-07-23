@@ -2,106 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Noctisverse Portfolio | Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noctisverse | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
   <style>
-    /* Reset */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
     body {
-      background-color: #0a0a0a;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
       color: #eee;
-      line-height: 1.6;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
     }
-    a {
-      color: #ff2c2c;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #ff5959;
-    }
+
     header {
       padding: 1rem 2rem;
-      border-bottom: 1px solid #222;
-      background: #111;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      border-bottom: 1px solid #444;
     }
-    header h1 {
-      font-family: 'Alex Brush', cursive;
-      font-size: 1.8rem;
-      color: #ff2c2c;
-    }
-    nav a {
-      margin-left: 1.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    nav a.active {
-      border-bottom: 2px solid #ff2c2c;
-    }
-    main {
-      flex: 1;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section.about-me {
-      margin-bottom: 3rem;
-    }
-    section.about-me h2 {
+
+    .logo {
       font-family: 'Alex Brush', cursive;
       font-size: 2.5rem;
-      color: #ff2c2c;
-      margin-bottom: 1rem;
-      text-align: center;
+      color: #f44336;
     }
-    section.about-me p {
-      font-size: 1.15rem;
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #eee;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f44336;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .content-box {
       max-width: 700px;
-      margin: 0 auto;
       text-align: center;
-      color: #ddd;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .content-box h1 {
+      font-family: 'Alex Brush', cursive;
+      font-size: 2.5rem;
+      color: #f44336;
+      margin-bottom: 1rem;
+    }
+
+    .content-box p {
+      font-size: 1rem;
       line-height: 1.8;
+      color: #ccc;
     }
-    footer {
-      background: #111;
-      color: #555;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      margin-top: auto;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
-      section.about-me h2 {
-        font-size: 2rem;
-      }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Noctisverse</h1>
+    <div class="logo">Noctisverse</div>
     <nav>
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="writing.html">Writing</a>
       <a href="design.html">Design</a>
       <a href="debate.html">Debate</a>
@@ -111,16 +91,15 @@
   </header>
 
   <main>
-    <section class="about-me">
-      <h2>About Me</h2>
+    <div class="content-box">
+      <h1>Welcome</h1>
       <p>
-        I'm a student with a passion for words, visuals, and ideas. I serve as the Executive Secretary of the SPSC Public Speaking and Debating Club, where I also engage as a debater and designer. I'm a self-taught writer, researcher, and graphic designer with no formal degrees, just deep curiosity and relentless drive. I've created a variety of posters and logos across different themes and tones — from academic to artistic. I’m especially strong in creative writing, where imagination meets emotion. Cinema inspires me, debate sharpens me, and design lets me breathe color into thought. I may not be a professional, but I work with the mindset of one. My skills are still evolving, but my commitment is unwavering.
+        I'm a student — constantly learning, ever curious.<br><br>
+        A passionate writer, a self-taught graphic designer, an active debater, and an unapologetic cinephile. Though I hold no formal degrees in these crafts, my heart beats through them.<br><br>
+        Executive Secretary at SPSC Public Speaking & Debating Club. I've created a wide range of visuals — from logos to posters — across countless themes.<br><br>
+        This is my space. A cinematic capsule of everything I create and everything I dream to be.
       </p>
-    </section>
+    </div>
   </main>
-
-  <footer>
-    &copy; 2025 Noctisverse. All rights reserved.
-  </footer>
 </body>
 </html>
